@@ -78,7 +78,7 @@ class MessengerScreen extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) => buildStoryItem(),
                       separatorBuilder: (context, index) => SizedBox(width: 5),
-                      itemCount: 10)),
+                      itemCount: 30)),
               SizedBox(
                 height: 5,
               ),
@@ -90,7 +90,7 @@ class MessengerScreen extends StatelessWidget {
                   separatorBuilder: (context, index) => SizedBox(
                         height: 15,
                       ),
-                  itemCount: 15),
+                  itemCount: 30),
             ],
           ),
         ),
