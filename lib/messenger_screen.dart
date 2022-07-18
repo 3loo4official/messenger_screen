@@ -72,1107 +72,125 @@ class MessengerScreen extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(
-                      width: 60,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 20.0,
-                                backgroundImage: NetworkImage(
-                                    'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 6.0,
-                                backgroundColor: Colors.green,
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Ali Gad Ali',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
+              Container(
+                  height: 100,
+                  child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) => buildStoryItem(),
+                      separatorBuilder: (context, index) => SizedBox(width: 5),
+                      itemCount: 10)),
+              SizedBox(
+                height: 5,
+              ),
+              ListView.separated(
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) => buildChatItem(),
+                  separatorBuilder: (context, index) => SizedBox(
+                        height: 15,
                       ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      width: 60,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 20.0,
-                                backgroundImage: NetworkImage(
-                                    'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 6.0,
-                                backgroundColor: Colors.green,
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Ali Gad Ali',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      width: 60,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 20.0,
-                                backgroundImage: NetworkImage(
-                                    'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 6.0,
-                                backgroundColor: Colors.green,
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Ali Gad Ali',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      width: 60,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 20.0,
-                                backgroundImage: NetworkImage(
-                                    'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 6.0,
-                                backgroundColor: Colors.green,
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Ali Gad Ali',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      width: 60,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 20.0,
-                                backgroundImage: NetworkImage(
-                                    'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 6.0,
-                                backgroundColor: Colors.green,
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Ali Gad Ali',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      width: 60,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 20.0,
-                                backgroundImage: NetworkImage(
-                                    'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 6.0,
-                                backgroundColor: Colors.green,
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Ali Gad Ali',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      width: 60,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 20.0,
-                                backgroundImage: NetworkImage(
-                                    'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 6.0,
-                                backgroundColor: Colors.green,
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Ali Gad Ali',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Container(
-                      width: 60,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 20.0,
-                                backgroundImage: NetworkImage(
-                                    'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                              ),
-                              CircleAvatar(
-                                radius: 7.0,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 6.0,
-                                backgroundColor: Colors.green,
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            'Ali Gad Ali',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Stack(
-                      alignment: AlignmentDirectional.bottomEnd,
-                      children: [
-                        CircleAvatar(
-                          radius: 25.0,
-                          backgroundImage: NetworkImage(
-                              'https://avatars.githubusercontent.com/u/102713256?v=4'),
-                        ),
-                        CircleAvatar(
-                          radius: 8.0,
-                          backgroundColor: Colors.white,
-                        ),
-                        CircleAvatar(
-                          radius: 7.0,
-                          backgroundColor: Colors.green,
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Ali Gad Ali ',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
-                        ),
-                        SizedBox(
-                          height: 5.0,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
-                              style: TextStyle(fontSize: 12),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            CircleAvatar(
-                              radius: 3.0,
-                              backgroundColor: Colors.blue,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text('12:12 am')
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              
+                  itemCount: 15),
             ],
           ),
         ),
       ),
     );
   }
+
+//arrow function
+  Widget buildStoryItem() => Container(
+        width: 60,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              alignment: AlignmentDirectional.bottomEnd,
+              children: [
+                CircleAvatar(
+                  radius: 20.0,
+                  backgroundImage: NetworkImage(
+                      'https://avatars.githubusercontent.com/u/102713256?v=4'),
+                ),
+                CircleAvatar(
+                  radius: 7.0,
+                  backgroundColor: Colors.white,
+                ),
+                CircleAvatar(
+                  radius: 6.0,
+                  backgroundColor: Colors.green,
+                )
+              ],
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              'Ali Gad Ali',
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            )
+          ],
+        ),
+      );
+
+  Widget buildChatItem() => Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            alignment: AlignmentDirectional.bottomEnd,
+            children: [
+              CircleAvatar(
+                radius: 25.0,
+                backgroundImage: NetworkImage(
+                    'https://avatars.githubusercontent.com/u/102713256?v=4'),
+              ),
+              CircleAvatar(
+                radius: 8.0,
+                backgroundColor: Colors.white,
+              ),
+              CircleAvatar(
+                radius: 7.0,
+                backgroundColor: Colors.green,
+              )
+            ],
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Ali Gad Ali ',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+              ),
+              SizedBox(
+                height: 5.0,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Hello, My name is Ali, I\'m from Egypt and work as flutter developer',
+                    style: TextStyle(fontSize: 12),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  CircleAvatar(
+                    radius: 3.0,
+                    backgroundColor: Colors.blue,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text('12:12 am'),
+                ],
+              ),
+            ],
+          )
+        ],
+      );
 }
